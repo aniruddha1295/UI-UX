@@ -10,6 +10,8 @@
   --text-dim: #9BA3AF;
   --accent: #E9EAED;
   --accent-2: #B9BEC7;
+  --gold: #D8B978;
+  --gold-dim: rgba(216,185,120,0.4);
   --glass-bg: rgba(255,255,255,0.045);
   --glass-border: rgba(255,255,255,0.09);
 }
@@ -91,11 +93,11 @@ button:focus-visible {
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-mark {
   width: 36px; height: 36px; border-radius: 10px;
-  background: #0C0F14; border: 1px solid rgba(255,255,255,0.35);
+  background: #0C0F14; border: 1px solid var(--gold-dim);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 14px; color: var(--accent);
+  font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 14px; color: var(--gold);
 }
-.brand-name { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 500; letter-spacing: 0.01em; }
+.brand-name { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 500; letter-spacing: 0.02em; }
 
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .navlink { font-size: 15px; color: var(--text-dim); transition: color 0.2s; }
@@ -127,15 +129,15 @@ button:focus-visible {
 
 .work-section { position: relative; z-index: 1; padding: 32px clamp(20px, 6vw, 64px) 40px; }
 .eyebrow {
-  font-size: 12.5px; color: var(--accent); letter-spacing: 0.12em; margin-bottom: 10px;
+  font-size: 12.5px; color: var(--gold); letter-spacing: 0.16em; margin-bottom: 10px;
   display: flex; align-items: center; gap: 8px;
 }
-.eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+.eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold-dim); }
 .section-head {
   display: flex; align-items: baseline; justify-content: space-between;
   margin-bottom: 28px; flex-wrap: wrap; gap: 12px;
 }
-.section-head h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(28px, 4.2vw, 38px); font-weight: 600; margin: 0; }
+.section-head h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(28px, 4.2vw, 38px); font-weight: 600; margin: 0; letter-spacing: -0.01em; }
 .section-head span { font-size: 14px; color: var(--text-muted); }
 
 .accordion-row { display: flex; gap: 14px; width: 100%; height: 440px; }
@@ -153,8 +155,8 @@ button:focus-visible {
 .acc-panel:nth-child(5) { animation-delay: 1.6s; }
 
 .acc-panel:hover, .acc-panel:focus-within {
-  flex-grow: 4; border-color: rgba(255,255,255,0.55); animation-play-state: paused;
-  box-shadow: 0 0 46px rgba(255,255,255,0.28), 0 30px 60px -18px rgba(0,0,0,0.7);
+  flex-grow: 4; border-color: var(--gold-dim); animation-play-state: paused;
+  box-shadow: 0 0 46px rgba(216,185,120,0.18), 0 30px 60px -18px rgba(0,0,0,0.7);
 }
 .acc-panel::before {
   content: ''; position: absolute; top: 0; left: -160%; width: 55%; height: 100%;
@@ -193,14 +195,14 @@ button:focus-visible {
 
 .brief { font-size: 14px; line-height: 1.5; color: #C4CAD3; margin: 0; }
 .tag { font-size: 12px; padding: 5px 12px; border-radius: 100px; width: fit-content; white-space: nowrap; }
-.tag-accent { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); color: #F3F5F7; }
+.tag-accent { background: rgba(216,185,120,0.12); border: 1px solid var(--gold-dim); color: var(--gold); }
 .tag-neutral { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); color: #D8DCE2; }
 
 .visit-pill {
   position: absolute; top: 18px; right: 18px; z-index: 6;
   display: flex; align-items: center; gap: 6px;
   padding: 7px 14px; border-radius: 100px; font-size: 12.5px; font-weight: 600;
-  background: rgba(6,7,9,0.6); border: 1px solid rgba(255,255,255,0.4); color: #F3F5F7;
+  background: rgba(6,7,9,0.6); border: 1px solid var(--gold-dim); color: var(--gold);
   opacity: 0; transition: opacity 0.35s ease;
 }
 .acc-panel:hover .visit-pill, .acc-panel:focus-within .visit-pill { opacity: 1; }
@@ -232,8 +234,8 @@ button:focus-visible {
   font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.node-badge:hover { border-color: rgba(255,255,255,0.6); box-shadow: 0 0 24px rgba(255,255,255,0.25); }
-.node-badge.is-final { border-color: rgba(255,255,255,0.5); color: #F3F5F7; }
+.node-badge:hover { border-color: var(--gold-dim); box-shadow: 0 0 24px rgba(216,185,120,0.22); }
+.node-badge.is-final { border-color: var(--gold-dim); color: var(--gold); }
 .node-label { font-size: 13px; color: #C4CAD3; text-align: center; white-space: nowrap; }
 .node-label.is-final { color: var(--text); font-weight: 600; }
 
@@ -243,11 +245,20 @@ button:focus-visible {
 .loop-arc-mobile { display: none; }
 
 @media (max-width: 768px) {
-  .flow-wrap { padding-top: 0; padding-left: 70px; }
-  .flow-row { flex-direction: column; align-items: flex-start; gap: 22px; }
+  .flow-wrap { padding-top: 0; padding-left: 70px; max-width: 100%; }
+  .flow-row { flex-direction: column; align-items: flex-start; gap: 22px; width: 100%; }
+  .flow-node { max-width: 100%; }
   .flow-arrow { margin-top: 0; transform: rotate(90deg); margin-left: 21px; }
   .loop-arc-desktop { display: none; }
-  .loop-arc-mobile { display: block; position: absolute; top: 25%; height: 33.34%; left: -62px; width: 60px; overflow: visible; }
+  .loop-arc-mobile { display: block; position: absolute; top: 25%; height: 33.34%; left: 10px; width: 60px; overflow: visible; }
+}
+
+@media (max-width: 420px) {
+  .flow-wrap { padding-left: 58px; }
+  .node-badge { width: 52px; height: 52px; font-size: 12px; }
+  .node-label { font-size: 12px; white-space: normal; }
+  .flow-arrow { margin-left: 17px; font-size: 18px; }
+  .loop-arc-mobile { left: 8px; width: 50px; }
 }
 
 /* ---------- TOOLS ---------- */
@@ -258,8 +269,8 @@ button:focus-visible {
   color: var(--text-muted); margin: 0 0 24px; text-align: center;
 }
 .tool-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
-.tool-chip { padding: 10px 20px; border-radius: 100px; font-size: 14px; transition: border-color 0.2s; }
-.tool-chip:hover { border-color: rgba(255,255,255,0.5); }
+.tool-chip { padding: 10px 20px; border-radius: 100px; font-size: 14px; transition: border-color 0.2s, color 0.2s; }
+.tool-chip:hover { border-color: var(--gold-dim); color: var(--gold); }
 
 /* ---------- reduced motion ---------- */
 
